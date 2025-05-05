@@ -1,5 +1,4 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ChatService } from '../../services/chat.service';
 import { UserService } from '../../services/user.service';
 @Component({
@@ -24,7 +23,6 @@ export class UserListComponent {
 
 
   constructor(
-    private modalService: NgbModal,
     private chatService: ChatService,
     private userService: UserService
   ) {
