@@ -9,7 +9,7 @@ import { Socket, io } from 'socket.io-client';
 
 export class ChatService {
   private socket:any;
-  private url ='http://localhost:3000';
+  private url ='https://chatapp-v9pa.onrender.com';
 
   constructor(private http: HttpClient) { 
     this.socket = io(this.url, {transports:['websocket', 'polling', 'flashsocket']});
@@ -36,7 +36,7 @@ export class ChatService {
   }
 
   getChatsForRoom(roomId: any){
-    return this.http.post('http://localhost:3000/api/getChatsForRoom',{roomId: roomId});
+    return this.http.post('https://chatapp-v9pa.onrender.com/api/getChatsForRoom',{roomId: roomId});
   }
 
   getStorage(){

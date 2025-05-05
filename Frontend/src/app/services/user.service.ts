@@ -8,9 +8,9 @@ export class UserService {
   constructor(private http :HttpClient) { }
 
   authenticateUser(data){
-    return this.http.post('http://localhost:3000/api/authenticate', data);
+    return this.http.post('https://chatapp-v9pa.onrender.com/api/authenticate', data);
   }
   getAllUsers(){
-    return this.http.get('http://localhost:3000/api/getAllUsers');
+    return this.http.get('https://chatapp-v9pa.onrender.com/api/getAllUsers');
   }
 }

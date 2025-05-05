@@ -12,13 +12,8 @@ dbConnect();
 const httpServer = require('http').createServer(app);
 const io = require('socket.io')(httpServer);
 
-const corsOptions = {
-    origin: 'http://localhost:4200',  // Allow requests from this origin (Angular app running on localhost:4200)
-    methods: 'GET,POST',              // Allow only specific HTTP methods
-    allowedHeaders: 'Content-Type',   // Allow only Content-Type header
-};
 app.use(express.json());
-app.use(cors(corsOptions));
+app.use(cors());
 
 
 
